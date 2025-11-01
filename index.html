@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Logic Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Quiz Selection Screen -->
+        <div id="selection-screen" class="screen active">
+            <div class="header">
+                <h1>Digital Logic Quiz</h1>
+                <p class="subtitle">Select an experiment to start the quiz</p>
+            </div>
+            <div class="quiz-grid" id="quiz-grid"></div>
+        </div>
+
+        <!-- Quiz Taking Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <button class="btn btn--secondary btn--sm" id="back-to-selection">← Back to Selection</button>
+                <h2 id="quiz-title"></h2>
+            </div>
+            
+            <div class="progress-info">
+                <span id="question-progress">Question 1 of 10</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h3 id="question-text" class="question-text"></h3>
+                <div class="options-container" id="options-container"></div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="btn btn--secondary" id="prev-btn" disabled>← Previous</button>
+                <button class="btn btn--primary" id="next-btn">Next →</button>
+                <button class="btn btn--primary" id="submit-btn" style="display: none;">Submit Quiz</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-header">
+                <h2>Quiz Results</h2>
+                <div class="score-card">
+                    <div class="score-main">
+                        <span class="score-number" id="score-display">0/10</span>
+                        <span class="score-label">Correct</span>
+                    </div>
+                    <div class="percentage" id="percentage-display">0%</div>
+                </div>
+            </div>
+
+            <div class="results-details" id="results-details"></div>
+
+            <div class="results-actions">
+                <button class="btn btn--secondary" id="retake-btn">Retake Quiz</button>
+                <button class="btn btn--primary" id="try-another-btn">Try Another Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
